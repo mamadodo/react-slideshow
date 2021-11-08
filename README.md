@@ -1,2 +1,2 @@
-# react-slideshow
+# react-01
 Created with CodeSandbox
