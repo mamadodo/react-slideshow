@@ -1,15 +1,29 @@
+import React, { useState } from "react";
 import "./styles.css";
 
 const onClickPlay = () => {};
 
 export const App = () => {
+  const [images] = useState([
+    "./images/img01.jpg",
+    "./images/img02.jpg",
+    "./images/img03.jpg",
+    "./images/img04.jpg"
+  ]);
+
   return (
     <main id="main1">
       <div className="imgarea">
-        <img className="img current" src="./images/img01.jpg" alt="image01" />
-        <img className="img" src="./images/img02.jpg" alt="image02" />
-        <img className="img" src="./images/img03.jpg" alt="image03" />
-        <img className="img" src="./images/img04.jpg" alt="image04" />
+        {images.map((image) => {
+          return (
+            <img
+              key={image}
+              className="img current"
+              src={image}
+              alt="{image}"
+            />
+          );
+        })}
       </div>
       <ul className="dot"></ul>
       <div className="btnarea">
